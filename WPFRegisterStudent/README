@@ -1,1 +1,50 @@
+Overview
+The WPF Register Student application is a simple student registration system that allows users to select and register for courses. The application tracks the total credit hours for registered courses and prevents users from exceeding a limit of 9 credit hours.
 
+Requirements and Goals
+The main goal of this application is to allow students to register for courses while ensuring they don’t exceed the credit hour limit (9 credits). It addresses the need for an easy-to-use interface for managing course registrations, providing feedback on credit hour status, and preventing duplicate registrations. The application was designed to make course registration more straightforward by allowing users to select from a list of courses, register, and see real-time feedback about their total credit hours and registration status.
+
+Features
+Select from a list of available courses.
+Register for a course while checking if the course has already been registered.
+Ensure that the total credit hours do not exceed 9 credits.
+Displays a confirmation or error message based on user actions.
+
+Technologies Used
+C#
+WPF (Windows Presentation Foundation)
+
+Getting Started
+Prerequisites
+Before running the application, ensure you have the following installed:
+.NET Framework (compatible version with WPF).
+Visual Studio or any compatible C# IDE.
+
+Installation
+Clone or download the repository to your local machine.
+Open the solution file in Visual Studio (or another C# IDE).
+Build the project to restore any required dependencies.
+Run the project by pressing F5 or clicking the Start button.
+
+Usage
+Upon launching the application, the available courses will be populated in the combo box.
+Select a course from the dropdown.
+Click the "Register" button to register for the course.
+If the course has already been registered or if the total credit hours exceed 9, an appropriate message will be displayed.
+If registration is successful, the course will be added to the list box, and the total credit hours will be updated.
+
+Answers to Development Questions
+1. Requirements and User Needs
+The WPF Register Student application was designed to meet the needs of students who need a simple and efficient way to register for courses while ensuring they stay within the university's credit hour limits. The application allows students to select courses from a list, check if they have already registered, and confirm their registration. By managing the total credits and preventing exceeding the credit limit, the application addresses key logistical challenges in student course registration.
+
+2. What Went Well in Development
+One area where the development went particularly well was in handling the course registration logic. The validation checks for duplicate registration, exceeding the credit limit, and course selection were implemented smoothly, ensuring that the user experience remained intuitive. Additionally, integrating the visual components (ComboBox, ListBox, TextBox, and Label) with the backend logic was seamless, and the feedback messages were appropriately displayed, allowing for easy troubleshooting and real-time updates to the user.
+
+3. Console vs. WPF Design
+The Console and WPF applications both serve the same purpose but are designed very differently. The Console application would have been purely text-based, which can be less intuitive and engaging for users. In contrast, the WPF design provides a graphical user interface that is more accessible and visually engaging. Key screens include the course selection dropdown (ComboBox), the course list (ListBox), the total credits display (TextBox), and the status messages (Label). The WPF design is user-centered because it presents the information in a clear and structured way, reducing user error and enhancing the overall experience. The interactive nature of the WPF interface, with real-time updates and validation messages, significantly improves usability compared to the Console version.
+
+4. Debugging and Coding Approach
+My approach to debugging involved systematically isolating and testing individual parts of the application. For instance, I began by confirming that the ComboBox was populated correctly and that the selection was being handled as expected. I used clear, detailed error messages to guide the user and inform them of the status of their registration. A helpful strategy I used was to break down larger tasks into smaller, manageable chunks—such as handling individual validation scenarios (e.g., checking for duplicate registration or ensuring the credit limit was not exceeded). In the future, I plan to continue using this incremental approach and also leverage unit testing to verify each component’s functionality more rigorously.
+
+5. Innovation and Problem Solving
+A challenge in the development process was implementing the course registration validation logic in a way that ensured the total credit hours were properly updated, and users couldn’t exceed the 9-credit limit. I needed to ensure that the registration process was not just about adding a course but also updating the current credit hours dynamically and displaying appropriate feedback. To overcome this, I creatively used the currentCredits variable to track the total credits and incorporated conditional checks before adding a course to ensure the credit limits weren’t exceeded. This involved a bit of innovative thinking in terms of combining UI updates with backend logic to provide a fluid and user-friendly experience.
